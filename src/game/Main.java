@@ -112,9 +112,11 @@ public static void main(String[] args) {
 	   	    	 
             //Pause menu
 	   	    if(!pg.isActivated){
+	   	    	
             ///this is the actual game code
+	   	    	
 	            //Update physics, window size, etc...
-	       	    e.step(true);
+	       	    e.tick();
 	   	    	
 	    	// move/do stuff
 
@@ -168,7 +170,9 @@ public static void main(String[] args) {
 	     }else{
 	     //End
 	     l++;
+	     
 	     r.render(eg);
+	     
 	     if(l == 2){
 
 		   try{

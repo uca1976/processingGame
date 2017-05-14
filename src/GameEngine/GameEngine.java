@@ -28,12 +28,10 @@ public void setMainPlayer(Player p){
 
 
 
-public void step(boolean usePhysics){
+public void tick(){
+	
 	//Update physics
-	if(usePhysics)
-	{
 	Public.box2d.step();
-	}
 	
 	//Update daytime
 	Public.DayTime++;
