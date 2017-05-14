@@ -1,0 +1,1 @@
+To run the .jar you will need to have the res folder in the same folder in wich the jar file is.
