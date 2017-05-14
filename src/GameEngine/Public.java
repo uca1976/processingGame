@@ -22,8 +22,8 @@ public class Public {
 	public static KeyboardManager km;
 	
 	//The time(used by the sky and otehr stuff)
-	public static int MaxDayTime = (24*60*60*60)/100;
-	public static int DayTime =0;
+	public static int MaxDayTime = (24*60*60*60)/50;
+	public static int DayTime =MaxDayTime/2+MaxDayTime/4;
 	
 	//Main player
 	public static Player pl = null;

@@ -37,11 +37,8 @@ public void tick(){
 	Public.DayTime++;
 	if(Public.DayTime >Public.MaxDayTime-1)Public.DayTime =0;
 	
-	Public.HEIGHT = Public.p.height;
-	Public.WIDTH = Public.p.width;
-	
 	Public.km.updateKeysPressed();
-    
+
 	Public.mX = Public.p.mouseX-Public.WIDTH/2;
     Public.mY = Public.p.mouseY-Public.HEIGHT/2;
 	

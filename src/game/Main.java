@@ -44,7 +44,7 @@ public static void main(String[] args) {
 		r = new Renderer();
 
 		//Sky
-		sky = new Sky();
+		sky = new Sky(Referance.SunTexturePath,Referance.MoonTexturePath);
 		
 		//Ground
 		g= new Ground(Referance.GroundTexturePath);		

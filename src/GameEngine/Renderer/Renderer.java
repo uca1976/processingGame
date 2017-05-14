@@ -25,7 +25,7 @@ public static PImage loadImage(String imgPath){
 	for(int x = 0; x < img.width; x++ ){
 		  for(int y = 0; y < img.height; y++ ){
 		   int i = ( ( y * img.width ) + x );
-		    if(img.pixels[i] > Public.p.color(30, 30, 30)){
+		    if(img.pixels[i] == Public.p.color(255, 255, 255)){
 		      newImg.pixels[i] = Public.p.color(0, 0, 0, 0);
 		    }else {
 		      newImg.pixels[i] = img.pixels[i];

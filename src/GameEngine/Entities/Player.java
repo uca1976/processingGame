@@ -33,8 +33,8 @@ public void move(int w){
 	w*=(100*speed)-(jumping*((speed-0.7f)*100));
     body.applyForceToCenter(new Vec2(w,0));
 
-
 }
+
 public void keysReleased(){
 	if(jumping != 1)
 	body.setLinearVelocity(new Vec2(body.getLinearVelocity().x/1.3f,body.getLinearVelocity().y/1.3f));
