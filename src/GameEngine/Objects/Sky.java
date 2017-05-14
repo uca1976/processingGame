@@ -4,6 +4,7 @@ import org.jbox2d.common.Vec2;
 
 import GameEngine.Public;
 import GameEngine.Objects.Object;
+import GameEngine.Renderer.Renderer;
 import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PImage;
@@ -16,8 +17,8 @@ public class Sky extends Object{
  
 	public Sky(String SunTexturePath,String MoonTexturePath){
 		super("", new Vec2(0, 0));
-		sun = Public.p.loadImage(SunTexturePath);
-		moon = Public.p.loadImage(MoonTexturePath);
+		sun = Renderer.loadImage(SunTexturePath);
+		moon = Renderer.loadImage(MoonTexturePath);
 	
 	}
  

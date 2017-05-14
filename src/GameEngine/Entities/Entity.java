@@ -1,6 +1,5 @@
 package GameEngine.Entities;
 
-import java.io.File;
 
 import org.jbox2d.collision.shapes.PolygonShape;
 import org.jbox2d.common.Vec2;
@@ -31,33 +30,10 @@ public Entity(Vec2 startLoc,double speed ,String TexturePath,float density,float
 
 	
 
-	
-
-    this.startLoc = startLoc;
-    
-	//Texture
-	if(TexturePath != ""){
-		File f = new File(TexturePath);
-		if(!f.isDirectory()){
-        if(f.exists()){
-		this.texture = Renderer.loadImage(TexturePath);
-        }else{
-        noTexture = true;
-        }
-		
-        }else{
-            noTexture = true;
-            }
-		
-	}else{
-	noTexture = true;
-	  }
-	
-	
+	    this.texture = Renderer.loadImage(TexturePath);
 
 
 
-    if(!noTexture){
     	//Body def
     	BodyDef bd = new BodyDef();
     	bd.type = BodyType.DYNAMIC;
@@ -74,7 +50,7 @@ public Entity(Vec2 startLoc,double speed ,String TexturePath,float density,float
         fd.setFriction(friction);
         fd.setRestitution(restitution);
         body.createFixture(fd);
-    }
+ 
  
 	
 	
