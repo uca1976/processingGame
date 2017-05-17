@@ -3,7 +3,6 @@ package GameEngine;
 import GameEngine.Entities.Player;
 import processing.core.PApplet;
 import shiffman.box2d.Box2DProcessing;
-
 public class Public {
 	
     public static PApplet p;
