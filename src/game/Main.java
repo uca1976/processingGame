@@ -23,7 +23,7 @@ private Renderer r;
 private EndGUI eg;
 private PauseGUI pg;
 private KeyboardManager km;
-private short l=0;
+private boolean end = false;
 
 public static void main(String[] args) {
 	PApplet.main("game.Main");
@@ -133,13 +133,7 @@ public static void main(String[] args) {
 	          //Pause menu
 	          else if(keyCurrentlyPressed == 'e' ||keyCurrentlyPressed == 'E'){
 		         pg.isActivated=true;
-
-	             try{
-		           Thread.sleep(160);
-	             }catch (InterruptedException e1){
-			         e1.printStackTrace();
-	             }
-	             
+		           delay(160);
 	         }
 
 	    //Game
@@ -157,38 +151,31 @@ public static void main(String[] args) {
 	    	//Escape
 	    	if(keyCurrentlyPressed == 'e'||keyCurrentlyPressed=='E'){
 				pg.isActivated=false;
-
-			  try{
-				 Thread.sleep(160);
-				}catch (InterruptedException e1){
-				 e1.printStackTrace();
-				}
+				 delay(160);
 	    	}
 
 	    
 	    }
 	     }else{
+	    	 
 	     //End
-	     l++;
-	     
 	     r.render(eg);
-	     
-	     if(l == 2){
-
-		   try{
-			  Thread.sleep(13000);
-			 }catch (InterruptedException e1){
-			  e1.printStackTrace();
-			 }
-
+	     if(end){
+		delay(7300);
+        
 	     stop();
-	     System.exit(1);
+	     exit();
+	     }else{
+	    	 end = true;
 	     }
+	     
 
          
 
 	     }
 
+	   	    
+	   	    
 	     }else{
 	    	 
     	 //Start
@@ -196,15 +183,12 @@ public static void main(String[] args) {
 
 	     }
 	    	
-
-
-
-	    }
+	  }
 
 
 
 	    private void renderGame(){
-	    	 //Game
+	    	 //Game rendering 
 	    	  r.render(sky);
 			  r.render(p);
 			  r.render(g);

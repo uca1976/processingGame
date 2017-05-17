@@ -10,6 +10,7 @@ public class EndGUI extends GUI{
 	private GUILabel endLabel;
     private int n =0;
 	public EndGUI(){
+		
 		String label="";
 		for(String credit : Referance.credits ){
 			//if(credit.contains(":"))credit="\n"+credit;
@@ -20,6 +21,7 @@ public class EndGUI extends GUI{
         n++;
         endLabel = new GUILabel(new PVector((n/7)*10,-(n*10+1)),label,18);
 		elements.add(endLabel);
+		
 	}
 
 

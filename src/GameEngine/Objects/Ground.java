@@ -15,7 +15,6 @@ public class Ground extends Object{
     public Body body;
 	public Ground(String texturePath) {
 		super(texturePath, new Vec2(0, Public.p.height) );
-		System.out.println(texture.height);
 		//Body def
     	BodyDef bd = new BodyDef();
     	bd.type = BodyType.STATIC;
